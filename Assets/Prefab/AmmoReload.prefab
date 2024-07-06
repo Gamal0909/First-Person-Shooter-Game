@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &65362281797001501
+--- !u!1 &4226859354300945867
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 200116246179436884}
-  - component: {fileID: 3637112720391456093}
-  - component: {fileID: 1945702023203151386}
-  - component: {fileID: 7346405731615240482}
-  - component: {fileID: 9077244626727837708}
+  - component: {fileID: 4226859354300945857}
+  - component: {fileID: 4226859354300945870}
+  - component: {fileID: 4226859354300945871}
+  - component: {fileID: 4226859354300945868}
+  - component: {fileID: 4226859354300945869}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: AmmoReload
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &200116246179436884
+--- !u!4 &4226859354300945857
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65362281797001501}
-  m_LocalRotation: {x: 0.4975541, y: 0.556666, z: 0.40470496, w: 0.52799326}
-  m_LocalPosition: {x: 0.008000024, y: 0.10100001, z: 0.29299998}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_ConstrainProportionsScale: 1
+  m_GameObject: {fileID: 4226859354300945867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.6996841, y: 1.24, z: -30.484364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 4.292, y: 96.615, z: 79.758}
---- !u!33 &3637112720391456093
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4226859354300945870
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65362281797001501}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1945702023203151386
+  m_GameObject: {fileID: 4226859354300945867}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4226859354300945871
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65362281797001501}
+  m_GameObject: {fileID: 4226859354300945867}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,31 +85,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7346405731615240482
+--- !u!65 &4226859354300945868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4226859354300945867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.4174396, z: 1.7160778}
+  m_Center: {x: 0, y: -0.09489256, z: 0.030776024}
+--- !u!114 &4226859354300945869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65362281797001501}
+  m_GameObject: {fileID: 4226859354300945867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65e7cf91b0fb7f34c8e59bde14522070, type: 3}
+  m_Script: {fileID: 11500000, guid: 9892be7b0a985a6469817a68b9ef2ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  bulletLife: 4
-  damage: 5
---- !u!135 &9077244626727837708
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65362281797001501}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.50000024
-  m_Center: {x: 0.000000029802322, y: 0, z: 0}
+  Ammoreload: {fileID: 4226859354300945867}
+  rotationspeed: 180
+  ammo: 10

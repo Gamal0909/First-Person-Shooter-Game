@@ -1,23 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.WSA;
-using UnityStandardAssets.Characters.FirstPerson;
 
 public class Enemy : MonoBehaviour
 {
-    private FirstPersonController player;
-    public float EnemySpeed = 5;
-    public float currSpeed;
-    public float stopDist = 4;
-    void Start()
+    public int enemyHealth = 10;
+    public int damage = 10;
+    private bool killed = false;
+
+    public bool Killed
     {
-        currSpeed = 1;
+        get { return killed; }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damageAmount)
+    {
+        if (!killed)
+        {
+            enemyHealth -= damageAmount;
+            if (enemyHealth <= 0)
+            {
+                killed = true;
+                OnKill();
+            }
+        }
+    }
+
+    protected virtual void OnKill()
     {
         
+        gameObject.SetActive(false);
     }
 }

@@ -1,26 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float speed=8f;
-    public float bulletlife = 4f;
-    private float lifetimer;
-    void Start()
+    public float speed = 8f;
+    public float bulletLife = 2f;
+    public int damage = 5;
+    private float lifeTimer;
+    private bool shotByPlayer;
+
+    public bool ShotByPlayer
     {
-        lifetimer = 0;
+        get { return shotByPlayer; }
+        set { shotByPlayer = value; }
     }
 
-    // Update is called once per frame
+    void OnEnable()
+    {
+        lifeTimer = 0f;
+    }
+
     void Update()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
-        lifetimer += Time.deltaTime;
-        if (lifetimer >= bulletlife)
+        lifeTimer += Time.deltaTime;
+        if (lifeTimer >= bulletLife)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null && ShotByPlayer)
+            {
+                enemy.TakeDamage(damage);
+                gameObject.SetActive(false);
+            }
         }
     }
 }
