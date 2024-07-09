@@ -1018,12 +1018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b2a85eab4419f489d676a632b87bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1458441019}
-  EnemyContiner: {fileID: 1620277222}
-  HealthText: {fileID: 1799523568}
-  AmmoText: {fileID: 2135661155}
-  EnemyText: {fileID: 530737729}
-  EnemyConut: 0
 --- !u!4 &1077219674
 Transform:
   m_ObjectHideFlags: 0
@@ -1235,17 +1229,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5030001987669227744, guid: 729402cd351aa2a488bd2785a458df54, type: 3}
   m_PrefabInstance: {fileID: 5030001986219207226}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1458441019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1458441019, guid: 729402cd351aa2a488bd2785a458df54, type: 3}
-  m_PrefabInstance: {fileID: 5030001986219207226}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452446426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e90279d922cd584a95ca8dc899d5dbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1458441021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1639,38 +1622,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799523566}
   m_CullTransparentMesh: 1
---- !u!1 &1966567430 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5101777647026789484, guid: 3d91e341c0ce32445a5a31f0ffee5dd7, type: 3}
-  m_PrefabInstance: {fileID: 743410839716287704}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1966567435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6185877668247845376, guid: 3d91e341c0ce32445a5a31f0ffee5dd7, type: 3}
   m_PrefabInstance: {fileID: 743410839716287704}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &1966567437
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966567430}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1001 &2086313333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1824,10 +1780,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Static Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5101777647026789484, guid: 3d91e341c0ce32445a5a31f0ffee5dd7, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6185877668247845376, guid: 3d91e341c0ce32445a5a31f0ffee5dd7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1872,8 +1824,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2729575405203528313, guid: 3d91e341c0ce32445a5a31f0ffee5dd7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d91e341c0ce32445a5a31f0ffee5dd7, type: 3}
 --- !u!1001 &2298577549890475823
 PrefabInstance:
